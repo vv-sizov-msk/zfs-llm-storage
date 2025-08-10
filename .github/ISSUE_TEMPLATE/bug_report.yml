@@ -1,0 +1,12 @@
+name: Bug report
+description: Сообщение об ошибке
+title: "[Bug] "
+labels: ["kind:bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло?
+      description: Опишите проблему
+    validations:
+      required: true

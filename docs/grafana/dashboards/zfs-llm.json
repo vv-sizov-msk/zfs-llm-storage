@@ -1,0 +1,27 @@
+{
+  "title": "ZFS LLM Storage",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "ARC size",
+      "targets": [
+        {
+          "expr": "zfs_arc_size"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "ZFS read/write bytes",
+      "targets": [
+        {
+          "expr": "zfs_zpool_read_bytes"
+        },
+        {
+          "expr": "zfs_zpool_write_bytes"
+        }
+      ]
+    }
+  ]
+}

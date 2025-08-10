@@ -1,0 +1,12 @@
+Source: zfs-llm-setup
+Section: admin
+Priority: optional
+Maintainer: Your Name <you@example.com>
+Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13)
+
+Package: zfs-llm-setup
+Architecture: all
+Depends: zfsutils-linux, nfs-kernel-server, targetcli-fb, ufw, prometheus-node-exporter
+Description: ZFS LLM/AI storage bootstrap scripts
+ Bootstrapper scripts to provision ZFS pool and services for LLM workloads.

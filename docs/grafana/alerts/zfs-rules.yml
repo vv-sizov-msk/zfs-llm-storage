@@ -1,0 +1,11 @@
+groups:
+  - name: zfs-alerts
+    rules:
+      - alert: ZpoolDegraded
+        expr: zfs_zpool_health == 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "ZFS pool degraded"
+          description: "Пул в состоянии DEGRADED"

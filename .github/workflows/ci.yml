@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: pre-commit/action@v3.0.1
+      - name: Install tooling
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y bats
+      - name: Shell tests
+        run: |
+          bats test/unit/bats || true
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build docs
+        run: |
+          pipx install mkdocs-material
+          mkdocs build

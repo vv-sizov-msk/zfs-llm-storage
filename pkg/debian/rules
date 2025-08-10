@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/zfs-llm-setup/usr/local/bin
+	cp scripts/zfs_llm_setup.sh debian/zfs-llm-setup/usr/local/bin/
+	cp scripts/zfs_text_metrics.sh debian/zfs-llm-setup/usr/local/bin/

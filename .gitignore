@@ -1,0 +1,9 @@
+.DS_Store
+*.swp
+*.swo
+__pycache__/
+dist/
+build/
+site/
+*.deb
+.env

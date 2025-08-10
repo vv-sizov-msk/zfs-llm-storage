@@ -1,0 +1,12 @@
+name: Feature request
+description: Запрос функциональности
+title: "[Feature] "
+labels: ["kind:feature"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что нужно сделать?
+      description: Опишите желаемое поведение
+    validations:
+      required: true

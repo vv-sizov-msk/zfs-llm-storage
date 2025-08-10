@@ -1,0 +1,5 @@
+---
+- hosts: storage
+  become: true
+  roles:
+    - zfs_llm

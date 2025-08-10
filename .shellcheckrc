@@ -1,0 +1,6 @@
+# Общие настройки ShellCheck для репозитория
+shell=bash
+severity=style
+enable=all
+# При необходимости можно точечно отключать правила в коде:
+#   # shellcheck disable=SCXXXX

@@ -1,0 +1,17 @@
+site_name: zfs-llm-storage
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+nav:
+  - Главная: index.md
+  - Быстрый старт: quickstart.md
+  - Дизайн: design.md
+  - ZFS тюнинг: zfs-tuning.md
+  - NFS и iSCSI: nfs-iscsi.md
+  - Firewall: firewall.md
+  - Мониторинг: monitoring.md
+  - Troubleshooting: troubleshooting.md

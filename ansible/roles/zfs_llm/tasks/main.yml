@@ -1,0 +1,11 @@
+---
+- name: Copy scripts
+  copy:
+    src: "{{ item }}"
+    dest: "/usr/local/bin/{{ item | basename }}"
+    mode: "0755"
+  with_fileglob:
+    - "../../scripts/*.sh"
+
+- name: Run setup
+  command: bash /usr/local/bin/zfs_llm_setup.sh
