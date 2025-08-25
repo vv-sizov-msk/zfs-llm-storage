@@ -25,7 +25,7 @@ jobs:
           pipx install mkdocs-material
           mkdocs build --strict --site-dir ./site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './site'
   deploy:
